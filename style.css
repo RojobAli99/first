@@ -1,0 +1,137 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+a{
+    
+    text-decoration: none;
+}
+.header{
+    width:  100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(16, 0, 57,.75),rgba(16, 0, 57,.75)), url(Photo/image.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+    
+}
+.photo{
+    position: absolute;
+    right: 8%;
+    top: 11.5%;
+}
+.photo img{
+    width: 100%;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 8%;
+    transition: .5s;
+}
+nav .logo{
+    width: 30px;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 10px 30px;
+    transition: .5s;
+    position: relative;
+}
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li::after{
+    content:'';
+    background: rgb(255, 0, 162);
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: .5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+.content{
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 7%;
+    padding: 20px;
+    z-index: 1;
+}
+.content h1{
+    font-size: 100px;
+    color: #fff;
+}
+.content p{
+    color: #fff;
+    line-height: 2;
+    opacity: 0;
+}
+.link{
+    margin-top: 30px;
+    opacity: 0;
+    
+}
+.link a{
+    display: inline-block;
+}
+.link a{
+    background: transparent;
+    font-size: 18px;
+    border: 1px solid #fff;
+    border-radius: 25px;
+    padding: 10px 35px;
+    color: #fff;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+    
+}
+.link a::after{
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgb(255, 0, 162);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: .5s;
+   
+
+}
+.link a:hover::after{
+    width: 100%;
+}
+.link a:hover{
+    border: none;
+}
+.animation-a{
+    animation: animation-a 1s linear forwards;
+}
+@keyframes animation-a{
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+p.animation-a{
+    animation-delay: 1s;
+}
+.link.animation-a{
+    animation-delay: 2s;
+}
